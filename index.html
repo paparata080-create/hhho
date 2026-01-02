@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>HACKED - xi_1zk</title>
+    <style>
+        body {
+            background-color: black;
+            margin: 0;
+            overflow: hidden;
+            font-family: 'Courier New', Courier, monospace;
+            color: #00FF00;
+            text-shadow: 0 0 5px #00FF00;
+        }
+        .text {
+            position: absolute;
+            white-space: nowrap;
+            font-weight: bold;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+<script>
+    // 페이지 접속 시 뜨는 알림창
+    alert("SYSTEM ERROR\nhellohlloelleohloelle");
+
+    // 요청하신 문구
+    const msg = "너의 계정은 이미 해킹됨 xi_1zk";
+
+    function hack() {
+        const div = document.createElement('div');
+        div.className = 'text';
+        div.innerText = msg;
+        
+        const x = Math.random() * window.innerWidth;
+        const y = Math.random() * window.innerHeight;
+        // 대각선 효과 (-40도 ~ 40도 랜덤 회전)
+        const rotate = (Math.random() * 2 - 4) + "deg";
+
+        div.style.left = x + 'px';
+        div.style.top = y + 'px';
+        div.style.fontSize = (Math.random() * 15 + 20) + 'px';
+        div.style.transform = `rotate(${rotate})`;
+
+        document.body.appendChild(div);
+    }
+
+    // 사라지지 않고 0.05초마다 계속 생성하여 누적
+    setInterval(hack, 30);
+</script>
+</body>
+</html>
